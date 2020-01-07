@@ -6,13 +6,13 @@ import TopNavBar from '../nav/TopNavbarHome.vue';
 Vue.use(Router);
 
 export default new Router({
-    mode: 'history',
-    routes: [{
-        path: '/',
-        name: 'Home',
-        components: {
-            default: HomePage,
-            topNav: TopNavBar,
-        }
-    }],
+  mode: 'history',
+  routes: [{
+    path: '/',
+    name: 'Home',
+    components: {
+      default: HomePage,
+      topNav: TopNavBar,
+    },
+  }],
 });

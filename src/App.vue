@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view name="topNav" />
-    <div class="container">
+    <div class="container home-view">
       <router-view />
     </div>
   </div>
@@ -9,17 +9,40 @@
 
 <script>
 export default {
-  name: "app"
+  name: 'app',
 };
 </script>
 
 <style>
+#app {
+  background-color: #eee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 ul {
   text-decoration: none;
   list-style: none;
-  padding-left: 0px;
+  padding-inline-start: 30px;
 }
+
+
 p {
-  overflow:auto;
+  overflow: auto;
 }
+
+.card {
+  margin-right: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 2px 2px 2px 2px #ccc;
+  background-color: #fff;
+}
+/* {
+  background-color: #0abab5;
+} */
+
+/* .home-view{
+  background-color: #6ADBD8;
+} */
 </style>

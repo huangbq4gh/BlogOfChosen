@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <router-link :to="{name:'Home'}" class="navbar-brand logo-text" exact>
+        Blog of Chosen</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -17,13 +19,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <router-link :to="{name:'Home'}" class="nav-link"> 
+            <router-link :to="{name:'Home'}" class="nav-link" exact>
               Home
               <span class="sr-only">(current)</span>
             </router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <button class="btn btn-primary">+ Write New</button>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -62,6 +64,13 @@
 
 <script>
 export default {
-  name: "TopNavBar"
+  name: 'TopNavBar',
 };
 </script>
+
+<style scoped>
+.logo-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+</style>

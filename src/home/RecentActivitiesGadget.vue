@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row card">
     <h3>This gadget will display the user's recent activities</h3>
     <ul>
       <li>activity 1</li>
@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: "RecentActivitiesGadget"
+  name: 'RecentActivitiesGadget',
 };
 </script>

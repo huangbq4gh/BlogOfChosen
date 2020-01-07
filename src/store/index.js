@@ -5,7 +5,7 @@ import articleFeedsModule from './modules/articleFeeds';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules:{
-        articleFeeds: articleFeedsModule,
-    }
+  modules: {
+    articleFeeds: articleFeedsModule,
+  },
 });

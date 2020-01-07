@@ -1,5 +1,5 @@
 <template>
-  <div class="article-feed-card">
+  <div class="card article-feed-card">
     <h3 class="article-title">{{this.title}}</h3>
     <tag class="article-category">
       <span class="badge badge-primary">{{this.category}}</span>
@@ -10,28 +10,25 @@
 
 <script>
 export default {
-  name: "ArticleFeedCard",
+  name: 'ArticleFeedCard',
   props: {
     articleId: {
-      type: Number
+      type: Number,
     },
     title: {
-      type: String
+      type: String,
     },
     category: {
-      type: String
+      type: String,
     },
     preview: {
-      type: String
-    }
-  }
+      type: String,
+    },
+  },
 };
 </script>
 
 <style scoped>
-.article-feed-card {
-  margin-bottom: 20px;
-  padding:20px;
-  box-shadow: 2px 2px 2px 2px #ddd;
-}
+
+
 </style>

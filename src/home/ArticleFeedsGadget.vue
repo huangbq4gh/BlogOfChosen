@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row wrapper">
     <ul>
       <li v-for="(feed, index) in currentFeeds" :key="index">
         <article-feed-card
@@ -17,23 +17,40 @@
 </template>
 
 <script>
-import ArticleFeedCard from "./ArticleFeedCard.vue";
+import ArticleFeedCard from './ArticleFeedCard.vue';
 
 export default {
-  name: "ArticleFeedsGadget",
+  name: 'ArticleFeedsGadget',
   components: {
-    ArticleFeedCard
+    ArticleFeedCard,
   },
   computed: {
     currentFeeds() {
-      return this.$store.getters["articleFeeds/currentFeeds"];
-    }
-  }
+      return this.$store.getters['articleFeeds/currentFeeds'];
+    },
+  },
 };
 </script>
 
 <style scoped>
-ul{
-    width:100%;
+/* ul {
+  width: 100%;
+} */
+
+.article-feed-card {
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 0.5s;
+}
+
+.article-feed-card:hover {
+  box-shadow: 5px 10px 5px 5px #ddd;
+  cursor: pointer;
+  transform:translateX(-5px);
+}
+
+.wrapper:hover .article-feed-card:not(:hover) {
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+  opacity: 0.75;
 }
 </style>
